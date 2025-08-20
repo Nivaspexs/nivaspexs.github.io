@@ -1,2 +1,2 @@
 # nivaspexs.github.io
-Basura hecha con IA.
+Quizz HTML basado en template quizz de Koldenblue.
