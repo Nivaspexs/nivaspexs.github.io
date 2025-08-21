@@ -67,7 +67,7 @@ let highScore;                  // The player's score at the end of the quiz
 /** Creates the initial quiz explanation and start button, and retrieves local storage. */
 function initialQuiz() {
     console.log("Page reloaded.");
-    quizLayout.innerHTML = "Answer all the questions within the time limit! Incorrect answers will subtract " + PENALTYTIME + " seconds from the time.";
+    quizLayout.innerHTML = "Responde en el tiempo establecido! Por cada equivocación se descuentan " + PENALTYTIME + " segundos del total.";
     startBtn.style.display = "visible";
 
     // retrieve high scores lists from local storage.
@@ -403,7 +403,7 @@ function inputName(highScore) {
 function displayHighScores() {
     quizLayout.innerHTML = "";
     highScoresBtn.style.display = "none";
-    quizTitle.textContent = "High Scores";
+    quizTitle.textContent = "Mejores puntajes";
 
     // scoreSort() returns a sorted 2D array of names and scores.
     let sortedScores = scoreSort();
