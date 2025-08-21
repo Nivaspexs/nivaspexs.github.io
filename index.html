@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coding Quiz</title>
+  <title>Quiz Recordatorio N°1</title>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -26,31 +26,31 @@
 <body>
 
   <header class='top-bar'>
-    <a href="#" class="top-left-bar" id="top-left-high-scores">High scores</a>
-    <span id='timer' class="top-right-bar">Timer</span>
+    <a href="#" class="top-left-bar" id="top-left-high-scores">Puntajes</a>
+    <span id='timer' class="top-right-bar">Contador</span>
   </header>
 
   <hr>
 
   <main class="container">
     <header class='row'>
-      <h1 class='col-md-12' id='quiz-title'>Coding Quiz</h1>
+      <h1 class='col-md-12' id='quiz-title'>Quiz Recordatorio N°1</h1>
     </header>
 
     <section class="row name-input-row">
       <div class="col-md-12">
         <form id="name-input-form" method="POST">
-          <label for="name-text">Submit your score</label>
+          <label for="name-text">Escribe tu nombre</label>
           <input type="text" placeholder="Your name here" id="name-text">
         </form>
-        <button type="submit" class="btn btn-success" id="submit-score">Submit</button>
+        <button type="submit" class="btn btn-success" id="submit-score">Publicar</button>
       </div>
     </section>
 
     <section class='container' id='quiz'></section>
 
-    <button type="button" class="btn btn-primary" id='start'>Start</button>
-    <button type="button" class="btn btn-info" id='high-scores-btn'>High Scores</button>
+    <button type="button" class="btn btn-primary" id='start'>Inicia</button>
+    <button type="button" class="btn btn-info" id='high-scores-btn'>Puntajes</button>
 
     <hr id='answer-bar'>
     <p id="right-wrong"></p>

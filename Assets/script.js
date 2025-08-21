@@ -1,34 +1,42 @@
 "use strict";
 
-// Quiz questions to be asked.
+// Preguntas del quizz
 let questionArray = [
-    { "question": "How many bits are in a byte?",
-        "answers": ["4", "8", "16", "32", "64"],
-        "correctAnswer": 1
+    { "question": "¿Qué es IoT?",
+        "answers": [
+        "Es la interconexión de dispositivos cotidianos a través de Internet",
+        "Es la comunicación de dispositivos por cable",
+        "Cositas conectadas por la gracia de alguna energía divina",
+        "No podrás con el giro izquierdooo",
+        "Un lenguaje de programación"],
+        "correctAnswer": 0
     },
 
-    { "question": "In the JavaScript array \"spam = [1, 2, 3, 4, 5]\", what is spam[1] equal to?",
-        "answers": ["1", "[1, 2, 3, 4, 5]", "2", "undefined"],
+    { "question": "¿Qué son el Arduino y ESP8266?",
+        "answers": ["Una página web de simulación",
+        "Son cajitas negras",
+        "Son micro controladores programables",
+        "Pasa palabra"],
         "correctAnswer": 2
     },
 
-    { "question": "If you were a detective looking for the quiz answers, where might you look?",
-        "answers": ["Inspect the DOM for the button with id='correct'", 
-            "Look for the questions in the JavaScript source code", 
-            "Do research on the internet", 
-            "All of the above"
+    { "question": "En un circuito, ¿qué pasa si no pongo una resistencia a un led?",
+        "answers": ["Nada",
+            "Me ponen un 1",
+            "Explota el led",
+            "Se quema el led"
         ],
         "correctAnswer": 3
     },
 
-    { "question": "What does API stand for, in the context of web development?",
-        "answers": ["Are People Insane?!", "Asynchronous Possibility Interweaving", "Always Program Intelligently", "Application Programming Interface"],
-        "correctAnswer": 3
+    { "question": "¿Para qué sirve TinkerCad?",
+        "answers": ["Para simular circuitos, diseño 3D, etc", "Para comprar componentes", "No sé", "Es un entorno de desarrollo"],
+        "correctAnswer": 0
     },
 
-    { "question": "Which is NOT a type of loop in JavaScript?",
-        "answers": ["try... catch loops", "while loops", "do... while loops", "for loops"],
-        "correctAnswer": 0
+    { "question": "En un programa arduino, ¿Para qué sirve el 'void setup()'?",
+        "answers": ["Se ejecuta en bucle", "Establece la configuración inicial", "Define variables", "Prende el led"],
+        "correctAnswer": 1
     },
 ];
 
@@ -39,11 +47,11 @@ const quizLayout = document.getElementById('quiz');
 const timer = document.getElementById('timer');
 const nameInputForm = document.getElementById("name-input-form");
 const quizTitle = document.getElementById("quiz-title");
-const TOTALTIMEGIVEN = 100;     // Total time given to take quiz
+const TOTALTIMEGIVEN = 300;     // Total time given to take quiz
 const PENALTYTIME = 20;         // Penalty time for an incorrect answer. Suggestion: obtain by dividing TOTALTIMEGIVEN by number of questions.
 const SCORELISTLENGTH = 10;     // the number of high scores that will be stored
 const MAXNAMELENGTH = 50;       // the maximum length of a player's name that will be stored. Only used if INITIALSONLY = false.
-const INITIALSONLY = true;        // Only allows input of 3 initials when set to true. Change to false to accept full names.
+const INITIALSONLY = false;        // Only allows input of 3 initials when set to true. Change to false to accept full names.
 let highestScores = [];         // stores the top 10 highest scores
 let highScoresObj = {};         // stores high score names and associated scores
 let timeOver = true;            // indicates that quiz is over
@@ -118,7 +126,7 @@ function decrement() {
     let timerInterval = setInterval(
         function() {
             newTime--;
-            timer.textContent = "Time left: " + newTime + " seconds";
+            timer.textContent = "Tiempo restante: " + newTime + " segundos";
             if (newTime <= 0) {
                 clearInterval(timerInterval);
                 youGotAHighScore();
@@ -191,10 +199,10 @@ function checkAnswer(event) {
         let hrElem = document.getElementById("answer-bar");
         let feedbackText = document.getElementById('right-wrong');
         if (event.target.id === "correctAnswer") {
-            feedbackText.textContent = "Correct!!!"
+            feedbackText.textContent = "¡Correcto!"
         }
         else {
-            feedbackText.textContent = "Wrong :(";
+            feedbackText.textContent = "Equivocado :c , pero a la siguiente lo harás bien";
             penalize(PENALTYTIME);
         }
 
@@ -263,7 +271,7 @@ function youGotAHighScore() {
 
     // Remove any remaining quiz questions from the page.
     quizLayout.innerHTML = "";
-    console.log("ITS OVER");
+    console.log("Se acabó el tiempo");
 
     // Define score as time remaining. Score cannot be lower than zero.
     timer.textContent = "Timer";
@@ -278,17 +286,17 @@ function youGotAHighScore() {
     quizLayout.textContent = "Your score was: " + highScore;
 
     if (highScore === 0) {
-        highScoreDisplay.textContent += "\nOuch, better luck next time!";
+        highScoreDisplay.textContent += "\n Puxao, suerte para la próxima";
         quizLayout.appendChild(highScoreDisplay);
     }
     // check high scores list. Only 10 high scores will be accepted.
     else if (!isHighScore(highScore)) {
-        highScoreDisplay.textContent += "\nGood job! But you didn't get a high score this time!";
+        highScoreDisplay.textContent += "\nBuenísimo!";
         quizLayout.appendChild(highScoreDisplay);
     }
     // If high score, give opportunity to add to high scores list.
     else {
-        highScoreDisplay.textContent += "\nGood job!";
+        highScoreDisplay.textContent += "\nNaaaaaaaaaa, un graaandee!";
         quizLayout.appendChild(highScoreDisplay);
         document.getElementsByClassName("name-input-row")[0].style.display="block";
     }
