@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- EDITAR: datos del sitio y redes -->
+  <title>[Tu Nombre] — Portafolio</title>
+  <meta name="description" content="Portafolio de [Tu Nombre], estudiante de TI. Proyectos de software, electrónica e IoT.">
+  <meta name="author" content="[Tu Nombre]">
+  <meta name="theme-color" content="#f4efda">
+  <meta name="color-scheme" content="light">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://nivaspexs.github.io/portafolio.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="[Tu Nombre] — Portafolio">
+  <meta property="og:description" content="Software, electrónica e IoT.">
+  <meta property="og:url" content="https://nivaspexs.github.io/portafolio.html">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="static/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/site.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <div class="page">
+
+    <header class="site-header">
+      <a class="wordmark" href="#inicio">nivaspexs</a>
+
+      <nav class="site-nav" aria-label="Principal">
+        <a href="#proyectos">proyectos</a>
+        <a href="#sobre-mi">sobre mí</a>
+        <a href="#notas">notas</a>
+        <a href="#contacto">contacto</a>
+      </nav>
+    </header>
+
+    <main id="contenido">
+
+      <!-- Inicio -->
+      <section class="hero" id="inicio">
+        <!-- La única forma decorativa del sitio: un semicírculo radial,
+             como el símbolo de n2 en la app n de Jorge Drexler. -->
+        <svg class="hero-mark" viewBox="0 0 180 92" fill="none" aria-hidden="true" focusable="false">
+          <g stroke="currentColor" stroke-width="1" stroke-linecap="round">
+            <path d="M8 88a82 82 0 0 1 164 0"/>
+            <path d="M28 88a62 62 0 0 1 124 0"/>
+            <path d="M48 88a42 42 0 0 1 84 0"/>
+            <path d="M68 88a22 22 0 0 1 44 0"/>
+            <path d="M90 88V4"/>
+            <path d="M90 88L30 28M90 88l60-60M90 88L8 62M90 88l82-26M90 88L58 12M90 88l32-76"/>
+          </g>
+          <circle cx="90" cy="88" r="2.5" fill="currentColor"/>
+        </svg>
+
+        <p class="eyebrow">Portafolio · 2026</p>
+
+        <!-- EDITAR: tu nombre -->
+        <h1>Hola, soy <span class="ph">[Tu Nombre]</span>.</h1>
+
+        <!-- EDITAR: presentación breve -->
+        <p class="lede">Estudio TI y me gusta construir cosas que funcionan: software, circuitos y dispositivos conectados. <span class="ph">[Agrega una línea sobre lo que buscas ahora.]</span></p>
+
+        <p class="hero-links">
+          <a href="#proyectos">Ver proyectos</a>
+          <span class="sep" aria-hidden="true">/</span>
+          <a href="#contacto">Escríbeme</a>
+        </p>
+      </section>
+
+      <!-- Proyectos -->
+      <section class="section" id="proyectos">
+        <div class="section-head">
+          <span class="section-num">01</span>
+          <h2>Proyectos</h2>
+        </div>
+
+        <p class="section-intro">Una selección de proyectos de la universidad y de mi tiempo libre.</p>
+
+        <ol class="project-list">
+
+          <!-- EDITAR: proyecto 01 -->
+          <li class="project">
+            <div class="project-meta">
+              <span class="project-num">01</span>
+              <span class="project-cat project-cat--iot">IoT</span>
+              <span class="project-year">[2026]</span>
+            </div>
+            <div class="project-body">
+              <h3><span class="ph">[Nombre del proyecto IoT]</span></h3>
+              <p>[Qué mide o controla, con qué está hecho y qué aprendiste.]</p>
+              <p class="project-tech">ESP32 · MQTT · C++</p>
+              <p class="project-links"><span class="pending">[repo]</span><span class="pending">[demo]</span></p>
+            </div>
+          </li>
+
+          <!-- EDITAR: proyecto 02 -->
+          <li class="project">
+            <div class="project-meta">
+              <span class="project-num">02</span>
+              <span class="project-cat project-cat--electronica">Electrónica</span>
+              <span class="project-year">[2026]</span>
+            </div>
+            <div class="project-body">
+              <h3><span class="ph">[Nombre del proyecto de hardware]</span></h3>
+              <p>[Qué circuito diseñaste, para qué servía y cómo pasó del esquemático a la placa.]</p>
+              <p class="project-tech">KiCad · PCB · 3D</p>
+              <p class="project-links"><span class="pending">[repo]</span><span class="pending">[notas]</span></p>
+            </div>
+          </li>
+
+          <!-- EDITAR: proyecto 03 -->
+          <li class="project">
+            <div class="project-meta">
+              <span class="project-num">03</span>
+              <span class="project-cat project-cat--software">Software</span>
+              <span class="project-year">[2026]</span>
+            </div>
+            <div class="project-body">
+              <h3><span class="ph">[Nombre del proyecto web]</span></h3>
+              <p>[Qué problema resuelve, con qué stack está hecho y qué decisión técnica destacarías.]</p>
+              <p class="project-tech">React · Node.js · PostgreSQL</p>
+              <p class="project-links"><span class="pending">[repo]</span><span class="pending">[demo]</span></p>
+            </div>
+          </li>
+
+          <!-- EDITAR: proyecto 04 -->
+          <li class="project">
+            <div class="project-meta">
+              <span class="project-num">04</span>
+              <span class="project-cat project-cat--iot">IoT</span>
+              <span class="project-year">[2025]</span>
+            </div>
+            <div class="project-body">
+              <h3><span class="ph">[Nombre del proyecto de domótica]</span></h3>
+              <p>[Qué automatiza, cómo se controla y qué aprendiste sobre redes o energía.]</p>
+              <p class="project-tech">ESP8266 · WiFi · relés</p>
+              <p class="project-links"><span class="pending">[repo]</span><span class="pending">[notas]</span></p>
+            </div>
+          </li>
+
+          <!-- EDITAR: proyecto 05 -->
+          <li class="project">
+            <div class="project-meta">
+              <span class="project-num">05</span>
+              <span class="project-cat project-cat--electronica">Electrónica</span>
+              <span class="project-year">[2025]</span>
+            </div>
+            <div class="project-body">
+              <h3><span class="ph">[Nombre del proyecto de instrumentación]</span></h3>
+              <p>[Qué señal medías, qué etapas tiene el circuito y qué resultados obtuviste.]</p>
+              <p class="project-tech">Sensores · op-amps · LTspice</p>
+              <p class="project-links"><span class="pending">[repo]</span><span class="pending">[esquema]</span></p>
+            </div>
+          </li>
+
+          <!-- EDITAR: proyecto 06 -->
+          <li class="project">
+            <div class="project-meta">
+              <span class="project-num">06</span>
+              <span class="project-cat project-cat--software">Software</span>
+              <span class="project-year">[2025]</span>
+            </div>
+            <div class="project-body">
+              <h3><span class="ph">[Nombre del proyecto de escritorio]</span></h3>
+              <p>[Qué herramienta hiciste, para quién y qué parte del código te costó más.]</p>
+              <p class="project-tech">Python · SQLite · Linux</p>
+              <p class="project-links"><span class="pending">[repo]</span><span class="pending">[demo]</span></p>
+            </div>
+          </li>
+
+        </ol>
+      </section>
+
+      <!-- Sobre mí -->
+      <section class="section" id="sobre-mi">
+        <div class="section-head">
+          <span class="section-num">02</span>
+          <h2>Sobre mí</h2>
+        </div>
+
+        <div class="prose">
+          <p>Estudio <span class="ph">[carrera]</span> en <span class="ph">[universidad]</span>. Me interesa la parte práctica: programar, armar circuitos y probar hasta que algo funcione.</p>
+          <p><span class="ph">[Cuenta cómo llegaste a la tecnología y qué te gustaría hacer al terminar.]</span></p>
+        </div>
+
+        <dl class="facts">
+          <div>
+            <dt>formación</dt>
+            <dd><span class="ph">[Carrera]</span> · <span class="ph">[Universidad]</span></dd>
+          </div>
+          <div>
+            <dt>herramientas</dt>
+            <dd>Python, C/C++, JavaScript, ESP32, KiCad, Git</dd>
+          </div>
+          <div>
+            <dt>ahora</dt>
+            <dd><span class="ph">[Aprendiendo X]</span> · <span class="ph">[Buscando prácticas]</span></dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- Notas -->
+      <section class="section" id="notas">
+        <div class="section-head">
+          <span class="section-num">03</span>
+          <h2>Notas</h2>
+        </div>
+
+        <p class="section-intro">Apuntes cortos de lo que voy aprendiendo.</p>
+
+        <div class="notes">
+          <!-- EDITAR: nota 1 -->
+          <details class="note">
+            <summary>
+              <time datetime="2026-11-16">16.11.2026</time>
+              <span class="note-title"><span class="ph">[Título de la primera nota]</span></span>
+              <span class="note-toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="note-body">
+              <p>[Una nota breve: un problema, una prueba o algo que aprendiste.]</p>
+            </div>
+          </details>
+
+          <!-- EDITAR: nota 2 -->
+          <details class="note">
+            <summary>
+              <time datetime="2026-09-08">08.09.2026</time>
+              <span class="note-title"><span class="ph">[Título de la segunda nota]</span></span>
+              <span class="note-toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="note-body">
+              <p>[Qué probaste, qué falló y qué harías distinto la próxima vez.]</p>
+            </div>
+          </details>
+
+          <!-- EDITAR: nota 3 -->
+          <details class="note">
+            <summary>
+              <time datetime="2026-07-21">21.07.2026</time>
+              <span class="note-title"><span class="ph">[Título de la tercera nota]</span></span>
+              <span class="note-toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="note-body">
+              <p>[Una herramienta, un patrón de código o una idea a medio terminar.]</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- Contacto -->
+      <section class="section" id="contacto">
+        <div class="section-head">
+          <span class="section-num">04</span>
+          <h2>Contacto</h2>
+        </div>
+
+        <!-- EDITAR: disponibilidad y correo -->
+        <p class="contact-lede">¿Hablamos?</p>
+
+        <p class="contact-prose">Estoy disponible para <span class="ph">[prácticas, colaboraciones o proyectos]</span>. Escríbeme a <a href="mailto:tucorreo@example.com">tucorreo@example.com</a>.</p>
+
+        <ul class="contact-links">
+          <li><a href="https://github.com/Nivaspexs" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+          <li><span class="pending">[LinkedIn]</span></li>
+          <li><a href="mailto:tucorreo@example.com">correo ↗</a></li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 <span class="ph">[Tu Nombre]</span> · hecho con HTML y CSS</p>
+      <p><a href="quiz2.html">quiz de IoT (clase 1)</a> · última edición: <time datetime="2026-11-16">16.11.2026</time></p>
+    </footer>
+
+  </div>
+</body>
+</html>
